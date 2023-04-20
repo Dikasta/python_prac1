@@ -1,0 +1,15 @@
+1. Given a set of numbers -50 to 50, find all pairs that add up to a certain sum that is passed in. What's the O notation for what you just wrote? Can you make it faster? Can you find an O(n) solution? Implement the O(n) solution
+
+2. There are 20 different socks of two types in a drawer in a completely dark room. What is the minimum number of socks you should grab to ensure you have a matching pair?"
+
+3.Describe and code an algorithm that returns the first duplicate character in a string?
+
+4. In a given sorted array of integers remove all the duplicates.
+
+5.Consider a stack of N number of cards which are piled up and in facing down. Each card has a unique number from the range 1 to N. The card is stacked in such a way that it exhibits the following behavior: Take the first card and put it under the stack without revealing. Now the next card on the top will have the number 1 on it. Next take 2 cards one after the other and put is under the stack without revealing. Yes you guessed it right - the next card on the top will reveal a value of 2. This goes on. Eg. for such a series : 9,1,8,5,2,4,7,6,3,10 [for N=10] Write a program to generate such a series for a given N number of cards so that this behavior can be exercised.
+
+6. Merge two sorted linked list. The merged list should also be sorted. * Compact a string. i.e remove spaces * traverse a link list containing char* as data. test cases for the same. * reverse a string. test cases for the same. * remove all the given characters from a string.
+
+7. given two linked lists with a digit in each node, add the two linked lists together. the result must be a linked list with one digit in each node. use only one iteration of the two input lists.
+
+8.Are two words palindrome of each other?
