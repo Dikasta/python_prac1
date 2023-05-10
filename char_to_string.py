@@ -8,10 +8,17 @@ h = ['a','b','c','d','e','f']
 #print(''.join(h))
 
 # make string to charecter
-st='hello'
-li=[]
-for i in st:
-    li+=[i]
-print(li)  #o/p ['h', 'e', 'l', 'l', 'o']
+# st='hello'
+# li=[]
+# for i in st:
+#     li+=[i]
+#print(li)  #o/p ['h', 'e', 'l', 'l', 'o']
 
 #sdjkf
+# remove duplicate charecter
+# var =['h', 'e', 'l', 'l', 'o']
+# var1=[]
+# for i in var:
+#     if i not in var1:
+#         var1+=[i]
+# print(var1)
