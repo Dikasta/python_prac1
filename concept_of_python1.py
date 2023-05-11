@@ -4,7 +4,7 @@
 """
 # l1 = ["eat", "sleep", "repeat"]
 # obj1=enumerate(l1)
-# print(list(obj1)) # here 0 index and 'eat' values always we need to print obj1 in list without list we cant print[(0, 'eat'), (1, 'sleep'), (2, 'repeat')]
+# print(list(obj1)) # here 0 index and 'eat' values always we need to print obj1 in list without list/dict we cant print[(0, 'eat'), (1, 'sleep'), (2, 'repeat')]
 #
 # s='ggkeeks'
 # obj2=enumerate(s)
