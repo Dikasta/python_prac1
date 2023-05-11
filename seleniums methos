@@ -1,0 +1,21 @@
+1. get(String url) : This method will launch a new browser and opens the given URL
+
+2. getWindowHandle() : It is used to handle single window i.e. main window. It return type is string
+
+3. getWindowHandles() : It is used to handle multiple windows. It return type is Set. It will returns all handles from all opened browsers by Selenium WebDriver.
+
+4. close() : This command is used to close the current browser window which is currently in focus.
+
+5. quit() : This method will closes all the browsers windows which are currently opened and terminates the WebDriver session.
+
+6. getTitle() : This method is used to retrieve the title of the webpage
+
+7. navigate() : load a web page, refresh a web page, or move backwards and forwards in our browser’s history.
+
+8. Wait() : pause between execution statements.
+
+9. Implicit Wait :  Implicit Wait determines the amount of time a driver should wait for an element.
+If a program has multiple elements with a driver instance then Selenium waits for each element.
+
+10. Explicit Wait : Explicit Wait is used on 1 element at a time.
+Selenium pauses execution until time has expired or an expected condition is met using the WebDriverWait class.
