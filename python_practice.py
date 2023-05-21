@@ -1,0 +1,1 @@
+lst =[5, 1, 4, 3, 6, 8, 10, 7, 9]var= lst[0]for i in range(1,len(lst)-1):    if lst[i]>var:
