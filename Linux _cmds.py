@@ -1,4 +1,4 @@
-# port listening : netstar -tulpn | grep LISTEN
+# port listening : netstat -tulpn | grep LISTEN
 # list to running processes : top or ps
 # list of dead processes : ps -a
 # check services status : systemctl start/stop/restart/status/enable/disable {service name}
