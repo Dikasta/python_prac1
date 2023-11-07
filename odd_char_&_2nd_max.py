@@ -5,9 +5,9 @@
 #
 #     for i in frq:
 #         #print(i)
-#         cnt=0
-#         if frq[i]%2!=0 and cnt>1:
-#             del frq[i]
+#         
+#         if frq[i]%2!=0 :
+#             del frq[i] # c dleted
 #
 #             return True
 #     return False
