@@ -25,3 +25,20 @@ print(twosum(num, target1))
 # print(list(obj2)) #[(0, 'g'), (1, 'e'), (2, 'e'), (3, 'k')]
 # print(list(enumerate(s1,2))) #[(2, 'g'), (3, 'e'), (4, 'e'), (5, 'k')] (into enumerate function passing 2 is starting index)
 
+
+ef twosum(nums,lst, target):
+    values = {}
+    ls1=[]
+    for ind,val in enumerate(nums):
+        var= target-val
+        if var in values:   # in 2nd iteration var is 1 then var checking to dictionary(values) key if key available then if is true
+            ls1.append((values[var], ind))  # values[key like 1] get values 0 and ind in 2nd iteration 1
+        else:
+            values[val] =ind   # 1st iteration here values converted into key and ind treat as values then strore into dictionary values
+    return lst+ls1
+
+#num = [1, 5, 7, -1, 5]
+num =[3,7,5,9,1,4,-1]
+target1 = 6
+ls =[]
+print(twosum(num, ls,target1))  o/p=[(2, 4), (1, 6)]
