@@ -3,7 +3,7 @@ def twosum(nums,target):
     for ind,val in enumerate(nums):
         var= target-val
         if var in values:   # in 2nd iteration var is 1 then var checking to dictionary(values) key if key available then if is true
-            return [values[var], ind]   # values[key like 1] get values 0 and ind in 2nd iteration 1
+            return [values[var], ind]   # values[var] is index,values[key like 1] get values 0 and ind in 2nd iteration 1
         else:
             values[val] =ind   # 1st iteration here values converted into key and ind treat as values then strore into dictionary values
     return [-1,-1]
