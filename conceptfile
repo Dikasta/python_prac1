@@ -1,4 +1,5 @@
 concept1 : in programming i observed list taking much iterration space as compaire to set .for less memory use, use set not list.
+
 exp: ans =set()
 ans.add((nums[i], nums[j], nums[l], nums[r]))
 -------------------------------
@@ -7,7 +8,7 @@ concept 2: def removeDuplicates(self, nums: List[int]) -> int:
         i=0
         #print(nums)
         while i<len(nums)-1:
-            if nums[i]==nums[i+1]:
+            if nums[i]==nums[i+1]: # this will work on sorted list
                 nums.pop(i)
             else:
                 i+=1
