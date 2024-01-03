@@ -1,4 +1,4 @@
-
+# dictionary converted into list and tuple formate
 def fun(var,lst):
     ls =[]
     for k,v in var.items():
