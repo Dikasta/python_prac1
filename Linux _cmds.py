@@ -84,4 +84,18 @@ or recursively other subfolders as well. chmod is used to read the current file 
 #sudo chmod -R 0777 /home/user01/Videos/webuiex/results
 
 # sudo umount /dev/sda1
+----------------------
+File Level permissions
+These control permissions on the file level.
+
+r – Grants read permission
+w – Grant write permission
+x – Grant execute permission
+These operations need to be preceded with a '+' or '-' operator.
+
+'+' indicates adding a new permission, and '-'  indicates removing an existing permission.
+
+Here's an example:
+
+chmod +r sample.txt
 
