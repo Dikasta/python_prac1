@@ -1,0 +1,8 @@
+1. Git clone url/ssh => here cloning remote repo.
+2. Git add .   => create any file then add it
+3. Git commit -m “Deepak file name”
+4. Git push origin <barnch name -> like main or Deepak>
+5. Git pull origine <main branch>. => suppose any dev change file content on git  remote on that case I want to pull that changes
+6. Git branch < branch  name  Deepak1> => create Deepak1 branch on git
+7. Git branch => see all git branches including main branch
+8. Git checkout < branch  name  Deepak1> => switching the branches
