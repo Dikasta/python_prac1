@@ -27,3 +27,7 @@ print("Counted", len(data), "lines.")
 #https://stackoverflow.com/questions/1450393/how-do-i-read-from-stdin
 #https://stackoverflow.com/questions/1369526/what-is-the-python-keyword-with-used-for
 #https://www.geeksforgeeks.org/python-sys-module/
+
+
+var='Address\r'
+print(var.strip()) # o/p 'Address'  note: strip remove \r from string
