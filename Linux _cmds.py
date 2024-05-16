@@ -99,3 +99,8 @@ Here's an example:
 
 chmod +r sample.txt
 
+#display information about the CPU on Linux :   lscpu
+
+#Display information about memory total :   free
+
+ #How can I exclude one word with grep (I understood the question as "How do I match a word but exclude another", for which one solution is two greps in series: First grep finding the wanted "word1", second grep excluding "word2"):  grep "word1" | grep -v "word2"
