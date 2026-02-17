@@ -3,3 +3,23 @@ def factorial(x):
     return 1
   else:
   return x*factorial(x-1)
+
+
+#===================================
+s ='fd'
+# if condition with zero('') charecter return false and with any charecter (like one space, _,.,;) return true means if condition will work
+if s:
+    print("suceess")
+else:
+    print("failed there")
+
+
+=======================
+import ipaddress
+compressed_addr = "2001:db8::1001:2"
+ipv_ad ="2001:0db8:0000:0000:0000:0000:1001:0002"
+
+var = ipaddress.IPv6Address(compressed_addr) 
+var = var.exploded #o/p 2001:0db8:0000:0000:0000:0000:1001:0002
+#"2001:0db8:0000:0000:0000:0000:1001:0002" call var.compressed o/p 2001:db8::1001:2
+print(var)
