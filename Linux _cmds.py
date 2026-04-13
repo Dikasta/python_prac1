@@ -87,18 +87,37 @@ or recursively other subfolders as well. chmod is used to read the current file 
 ----------------------
 File Level permissions
 These control permissions on the file level.
-
-r – Grants read permission
-w – Grant write permission
-x – Grant execute permission
-These operations need to be preceded with a '+' or '-' operator.
-
-'+' indicates adding a new permission, and '-'  indicates removing an existing permission.
-
-Here's an example:
-
-chmod +r sample.txt
-
+#================
+Great question! Let’s break down all possible combinations of permissions with chmod digits so you can see exactly how they work.
+🔢 Permission Values
+* 0 = no permission
+* 1 = execute only
+* 2 = write only
+* 3 = write + execute
+* 4 = read only
+* 5 = read + execute
+* 6 = read + write
+* 7 = read + write + execute
+📂 Structure
+chmod uses three digits:
+* First digit → Owner (user)
+* Second digit → Group
+* Third digit → Others
+So chmod XYZ means:
+* X → owner permissions
+* Y → group permissions
+* Z → others permissions
+🧩 Examples of Combinations
+Command	Owner	Group	Others	Meaning
+chmod 777 dir	rwx	rwx	rwx	Everyone has full access
+chmod 755 dir	rwx	r-x	r-x	Owner full, group/others can read & execute
+chmod 700 dir	rwx	---	---	Only owner has full access
+chmod 770 dir	rwx	rwx	---	Owner & group full, others none
+chmod 644 file	rw-	r--	r--	Owner can read/write, group/others read only
+chmod 600 file	rw-	---	---	Owner can read/write, no one else
+chmod 666 file	rw-	rw-	rw-	Everyone can read/write, but not execute
+chmod 555 dir	r-x	r-x	r-x	Everyone can read & execute, no write
+#=================
 #display information about the CPU on Linux :   lscpu
 
 #Display information about memory total :   free
