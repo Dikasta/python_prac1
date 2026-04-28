@@ -127,7 +127,25 @@ monkey patching is a technique used to dynamically update the behavior of a piec
 What is a singleton design pattern? How can you Implement in python ?
 design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code
 
+'How it works:
+class Singleton:
+Defines a class.
+_instance = None
+A class-level variable that will store the single instance.
+def __new__(cls, *args, **kwargs):
+Overrides the __new__ method, which is responsible for creating a new object (before __init__ runs).
+if cls._instance is None:
+Checks if an instance has already been created.
+cls._instance = super(...).__new__(cls, *args, **kwargs)
+If not, it creates a new instance and stores it.
+return cls._instance
+Always returns the same stored instance.
+Result:
+s1 = Singleton()
+s2 = Singleton()
+print(s1 is s2)  # True
 
+Both s1 and s2 point to the same object in memory, so the comparison returns True.'
 
 class Singleton:
     _instance = None
