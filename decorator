@@ -52,6 +52,20 @@ print(squared)
 ==================================================
 Explain the difference between deep copy and shallow copy.
 Shallow Copy:
+exp: if change one place that thing reflect into another place
+import copy  
+
+a = [[1, 2, 3], [4, 5, 6]]
+
+# Creating a shallow copy of the nested list 'original'
+b = copy.copy(a)
+
+# Modifying an element in the shallow-copied list
+b[0][0] = 99
+
+# Printing the original and shallow-copied lists  
+print("b: ", b) 
+print("a: ", a)
 
 Creates a new object, but inserts references to the existing objects found in the original.
 
@@ -62,7 +76,19 @@ This is because both objects are pointing to the same memory location for the ne
 Shallow copy is faster and consumes less memory than deep copy.
 
 
-Deep Copy:
+Deep Copy: if i'll change one new place that will not reflect into original list
+syntax: copy.deepcopy()
+import copy
+
+a = [[1, 2, 3], [4, 5, 6]]
+
+# Creating a deep copy of the nested list 'a'
+b = copy.deepcopy(a)
+
+# Modifying an element in the deep-copied list
+b[0][0] = 99 
+print("b: ", b) 
+print("a: ", a) 
 
 Creates a completely independent copy of the original object and all its nested objects.
 
