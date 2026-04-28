@@ -1,1 +1,241 @@
+Explain the concept of Python decorators.
+A decorator is a design pattern in Python that allows a user to add new functionality to an existing object without modifying its structure. Decorators are typically applied to functions, and they play a crucial role in enhancing or modifying the behavior of functions.
+==================
+What are Python generators? How do they differ from iterators?
+A process that is repeated more than one time by applying the same logic is called an Iteration. 
+
+a = [0, 5, 10, 15, 20]
+for i in a:
+    if i % 2 == 0:
+        print(str(i)+' is an Even Number')
+    else:
+        print(str(i)+' is an Odd Number')
+
+Using an iterator-
+
+iter() function is used to create an iterator containing an iterable object.
+next() function is used to call the next element in the iterable object.
+
+
+Generators
+It is another way of creating iterators in a simple way where it uses the keyword “yield” instead of returning it in a defined function. Generators are implemented using a function. Just as iterators, generators also follow lazy evaluation. Here, the yield function returns the data without affecting or exiting the function. 
+
+def sq_numbers(n):
+    for i in range(1, n+1):
+        yield i*i
+
+
+a = sq_numbers(3)
+print("The square of numbers 1,2,3 are : ")
+print(next(a))
+print(next(a))
+print(next(a))
+================================
+What is the Global Interpreter Lock (GIL) in Python?
+The Global Interpreter Lock (GIL) in Python is a locking mechanism that ensures that only one thread can execute Python code at a time, even on multi-core processors.
+
+=====================================
+How does Python manage memory? Explain the concept of reference counting and garbage collection.
+In summary, Python manages memory automatically using reference counting as the primary mechanism and garbage collection to handle cyclic references. 
+
+This combination ensures efficient memory usage and frees developers from manual memory management tasks.
+
+Reference counting is a simple and efficient garbage collection strategy used by Python. It works by keeping track of the number of references to an object. When an object's reference count reaches zero, the object is no longer needed and can be safely deallocated from memory.
+
+============================================================
+What are lambda functions? How are they used in Python?
+Lambda functions in Python are small, anonymous functions defined using the lambda keyword. They can take any number of arguments but can only have one expression.
+
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)
+==================================================
+Explain the difference between deep copy and shallow copy.
+Shallow Copy:
+
+Creates a new object, but inserts references to the existing objects found in the original.
+
+Changes made to the nested objects in the copy will reflect in the original object, and vice versa.
+
+This is because both objects are pointing to the same memory location for the nested objects.
+
+Shallow copy is faster and consumes less memory than deep copy.
+
+
+Deep Copy:
+
+Creates a completely independent copy of the original object and all its nested objects.
+
+Changes made to the copy or the original object will not affect each other.
+
+This is because each object has its own separate copy of the data.
+
+Deep copy is slower and consumes more memory, especially for large and complex data structures.
+============================================
+What is the difference between __init__ and __new__ methods?
+In Python, the __new__ method creates a new object instance, while the __init__ method initializes the attributes of that new object. __new__ is called before __init__.
+__new__
+is a static method that allocates memory and prepares the object. It's responsible for returning a new instance of the class. __new__ can return any object.
+__init__
+is an instance method that initializes the state of the newly created object. It receives the argument self, which represents the instance of a class. __init__ must return None
+
+ ======================================
+What is monkey patching? How to use it in Python?
+monkey patching is a technique used to dynamically update the behavior of a piece of code at run-time
+    # Original module
+    class OriginalClass:
+        def method(self):
+            return "Original method"
+
+    # Monkey patching
+    def new_method(self):
+        return "Patched method"
+
+    # Patching the class method
+    OriginalClass.method = new_method
+    # Using the patched code
+    obj = OriginalClass()
+    print(obj.method())  # Output: "Patched method"
+
+===================================================
+What is a singleton design pattern? How can you Implement in python ?
+design pattern, which ensures that only one object of its kind exists and provides a single point of access to it for any other code
+
+
+
+class Singleton:
+    _instance = None
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super(Singleton, cls).__new__(cls, *args, **kwargs)
+        return cls._instance
+# Usage
+s1 = Singleton()
+s2 = Singleton()
+print(s1 is s2)  # Output: True
+======================================================
+How can you access attribute of parent class bypassing the attribute with the same name in derived class??
+In Python,
+
+class Parent:
+   variable = 12
+class Derived(Parent):
+   variable = 10
+Parent.variable # returns 12
+==============================================================
+
+How do you manage package dependencies in Python?
+This question to tests  the knowledge of package management tools like pip, virtualenv, pipenv, or poetry
+===================================================
+
+What is the difference between __str__ and __repr__ methods in Python?
+In Python, the __str__ and __repr__ methods are used to define string representations of objects. They serve different purposes and have different intended audiences.
+
+__str__ Method
+
+Purpose: Provides a "nice" or "informal" string representation of an object, which is meant to be readable.
+
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def __str__(self):
+        return f"{self.name}, {self.age} years old"
+p = Person("Alice", 30)
+print(str(p))  # Output: Alice, 30 years old
+print(p)       # Output: Alice, 30 years old
+
+-----------------
+__repr__ Method
+Purpose: Provides an "official" string representation of an object, which is meant to be unambiguous and ideally, complete enough to recreate the object.
+
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def __repr__(self):
+        return f"Person(name={self.name!r}, age={self.age})"
+p = Person("Alice", 30)
+print(repr(p))  # Output: Person(name='Alice', age=30)
+===================================================
+
+Find the maximum profit from stock prices:
+ 
+def max_profit(prices: List[int]) -> int:
+    min_price = float('inf')
+    max_profit = 0
+    for price in prices:
+        if price < min_price:
+            min_price = price
+        elif price - min_price > max_profit:
+            max_profit = price - min_price
+    return max_profit
+# Test case
+print(max_profit([7,1,5,3,6,4]))  # Output: 5
+============================================================
+Check if a string is a palindrome:
+
+
+def is_palindrome(s: str) -> bool:
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    return cleaned == cleaned[::-1]
+# Test case
+print(is_palindrome("A man, a plan, a canal: Panama"))  # Output: True
+============================================================
+Count the number of vowels in a string:
+
+
+def count_vowels(s: str) -> int:
+    vowels = set("aeiouAEIOU")
+    return sum(1 for char in s if char in vowels)
+# Test case
+print(count_vowels("hello world"))  # Output: 3
+print(calculate("2-1 + 2"))  # Output: 3
+print(calculate("(1+(4+5+2)-3)+(6+8)"))  # Output: 23
+
+======================================================
+Write a function to find the most repeated word in a sentence. If there are multiple words with the same highest frequency, return any one of them
+Example:
+
+Input: "This is a test. This test is only a test."
+
+Output: "test"
+
+Explanation: In the sentence, the word "test" appears the most frequently (3 times).
+========================
+Write a function to sort an array of integers in ascending order without changing the order and index of the negative numbers.
+Example:
+
+Input: [6, -3, 4, -1, 5, -7, 8]
+
+Output: [4, -3, 5, -1, 6, -7, 8]
+
+Explanation: The positive numbers [6, 4, 5, 8] are sorted to [4, 5, 6, 8], while the negative numbers -3, -1, and -7 remain in their original positions.
+
+======================================
+What will be the output of this execution:
+1):
+
+
+class A:
+        def process(self):
+            print('A')
+    class B(A):
+        pass
+    class C(A):
+        def process(self):
+            print('C')
+    class D(B,C):
+        pass
+    obj = D()
+    obj.process()
+ 
+
+Answer: Output of execution is: C
+
+================================
 
