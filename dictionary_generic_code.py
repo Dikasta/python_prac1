@@ -64,3 +64,4 @@ var = {
 lst=[]
 print(depth(var,lst, "t")) #here pass list(lst) and store all 't' values into list from given dictionary \
 # input and here get output into list format
+#input : get out for specific t key
