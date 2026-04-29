@@ -18,7 +18,7 @@ def fun(var, key='', sep='_'):
         keys = f'{key}{sep}{k}' if key else k
         if isinstance(v, dict):
 
-            di.update(fun(v, keys, sep))
+            di.update(fun(v, keys, sep)) # update is required to check nested dict condition
         else:
             di[keys] = v
 
