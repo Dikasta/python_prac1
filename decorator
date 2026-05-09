@@ -217,7 +217,7 @@ print(repr(p))  # Output: Person(name='Alice', age=30)
 Find the maximum profit from stock prices:
  
 def max_profit(prices: List[int]) -> int:
-    min_price = float('inf')
+    min_price = float('inf') #float('inf') ->float values can be used to represent an infinite integer. One can use float('inf') as an integer to represent it as infinity
     max_profit = 0
     for price in prices:
         if price < min_price:
