@@ -1,4 +1,5 @@
 # port listening : netstat -tulpn | grep LISTEN
+netstat -tlnp | grep :22
 # list to running processes : top or ps
 # list of dead processes : ps -a
 # check services status : systemctl start/stop/restart/status/enable/disable {service name}
