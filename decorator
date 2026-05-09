@@ -14,6 +14,13 @@ for i in a:
 Using an iterator-
 
 iter() function is used to create an iterator containing an iterable object.
+d = {'a': 1, 'b': 2, 'c': 3}
+iterator = iter(d)
+
+for key in iterator:
+    print(key)
+
+-----------------------
 next() function is used to call the next element in the iterable object.
 
 
