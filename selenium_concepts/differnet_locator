@@ -25,6 +25,9 @@ driver.minimize_window()
 driver.fullscreen_window()
 driver.close()
 driver.quit()
+driver.navigate().to("http://www.example.com") # get() also doing same
+driver.navigate().forward();
+driver.navigate().back();
 """
 
 import time
