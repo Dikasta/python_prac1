@@ -9,6 +9,6 @@ def permu(a,k=0):
             a[k],a[i]=a[i],a[k]
 
 
-li=[1,2,3]
+li=[1,2,3] # work for n length list
 k=0
 permu(li)
