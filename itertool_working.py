@@ -19,7 +19,7 @@ print(list(itertools.chain(numbers, words)))
 
 # accumulate(): Running totals
 print(list(itertools.accumulate([1, 2, 3, 4])))
-# Output: [1, 3, 6, 10] (1, 1+2, 1+2+3, 1+2+3+4)
+# Output: [1, 3, 6, 10] # (1, 1+2, 1+2+3, 1+2+3+4) we can make it
 
 #==========================
 # count(): Endless counter
