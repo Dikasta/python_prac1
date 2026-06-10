@@ -52,6 +52,16 @@ for i in range(0, n-2):
             n1-=1
 
 
+#To group consecutive characters for the string
+
+from itertools import groupby
+
+text = "aabbcccccddaaabbbbd"
+# Group consecutive identical characters
+grouped = [f"{key}: {len(list(group))}" for key, group in groupby(text)]
+print(grouped) # # Output: ['a: 2', 'b: 2', 'c: 5', 'd: 2', 'a: 3', 'b: 4', 'd: 1']
+
+
 
 
 
